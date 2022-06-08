@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: see
+  name: odds
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: see
+      app: odds
   template:
     metadata:
       labels:
-        app: see
+        app: odds
     spec:
       containers:
       - image: okteto.dev/ray:latest
-        name: see
+        name: odds
         ports:
         - containerPort: 8080
         env:
